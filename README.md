@@ -5,6 +5,8 @@ Template for hk express based microservices
 
 - download archive of project from releases .zip
 - unpack .zip and use files to push to your empty repo
+- `yarn install` install node modules
+- `yarn start` install node modules
 
 ## Important commands
 

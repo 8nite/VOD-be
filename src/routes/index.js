@@ -5,6 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
   const options = {
     uri: 'https://accedo-ps-programming-exam.s3-ap-southeast-1.amazonaws.com/movies.json',
     headers: {

@@ -8,8 +8,8 @@
     "transpile": "babel ./src --out-dir dist-server",
     "clean": "rimraf dist-server",
     "build": "npm-run-all clean transpile",
-    "test": "mocha ./**/*spec.js --reporter spec",
-    "cover": "./node_modules/.bin/nyc ./node_modules/.bin/_mocha --require @babel/register \"src/**/*.js\" && get-coverage"
+    "test": "mocha --require @babel/register \"src/**/*.js\" --reporter spec --exit",
+    "cover": "./node_modules/.bin/nyc --reporter=html mocha --require @babel/register \"src/**/*.spec.js\" --exit"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -34,5 +34,11 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "expect": "^25.1.0",
+    "proxyquire": "^2.1.3",
+    "supertest": "^4.0.2"
   }
 }

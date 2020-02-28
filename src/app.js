@@ -6,8 +6,8 @@ import indexRouter from './routes/index';
 const app = express();
 
 app.use(bodyparser.json({limit: '50mb', extended: true}));
-app.use(bodyparser.urlencoded( {limit: '50mb', extended: true} ));
 
+//start express using port 3010
 app.listen(3010, () => console.log('listening on port 3010'));
 
 app.use("/", indexRouter);
